@@ -1,0 +1,17 @@
+{
+  "peak_thresholds": {
+    "sales|15": 92.0,
+    "sales|30": 187.0,
+    "sales|60": 367.0,
+    "sales|120": 743.0,
+    "redemptions|15": 86.0,
+    "redemptions|30": 176.0,
+    "redemptions|60": 341.0,
+    "redemptions|120": 686.0
+  },
+  "train_end": "2023-12-31 23:45",
+  "val_end": "2024-12-31 23:45",
+  "data_start": "2015-05-01 13:30:00",
+  "data_end": "2025-12-21 22:30:00",
+  "test_start": "2025-01-01 00:00:00"
+}

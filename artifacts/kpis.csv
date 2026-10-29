@@ -1,0 +1,17 @@
+target,model,Forecast Accuracy %,Error Drift (pp),Peak Miss Rate %,Confidence Band Width (rel %),Forecast Lead Time (min)
+redemptions,ARIMA (Fourier),58.155,5.144,23.54,78.507,120
+redemptions,Gradient Boosting,74.737,-9.88,19.548,92.398,120
+redemptions,Linear Regression,63.529,3.91,27.008,140.886,60
+redemptions,Moving Average,56.389,9.327,31.043,182.731,60
+redemptions,Naive,60.9,13.879,27.138,158.135,60
+redemptions,Prophet,20.34,-9.028,58.747,206.957,0
+redemptions,Random Forest,74.017,-9.203,20.849,99.515,120
+redemptions,XGBoost,74.431,-9.145,19.606,95.47,120
+sales,ARIMA (Fourier),59.43,3.065,23.946,78.305,120
+sales,Gradient Boosting,76.288,-9.143,13.595,95.243,120
+sales,Linear Regression,66.022,3.911,24.751,127.651,60
+sales,Moving Average,58.436,8.463,31.018,164.233,30
+sales,Naive,63.046,12.86,25.856,148.398,60
+sales,Prophet,28.909,-7.645,59.25,190.797,0
+sales,Random Forest,75.775,-8.708,14.809,95.599,120
+sales,XGBoost,75.92,-9.529,13.464,95.424,120
