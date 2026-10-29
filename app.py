@@ -184,6 +184,7 @@ with tab_live:
         X = build_features(y).iloc[[-1]]
         rows = []
         for h in HORIZONS:
+            st.write("Loading model:", target, h, model)
             bundle = load_model(target, h, model)
             p = max(float(bundle["model"].predict(X[bundle["features"]])[0]), 0.0)
             lo, hi = bundle["calibrator"].predict_interval([p])
