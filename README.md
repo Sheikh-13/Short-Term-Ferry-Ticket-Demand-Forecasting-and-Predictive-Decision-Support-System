@@ -227,10 +227,13 @@ For each selected date, time and horizon, the system shows:
 
 ![Model Comparison](snapshots/2.ModelComparison.png)
 
+![KPI Table](snapshots/3.KeyPerformanceIndicators.png)
+
+
 ### **Latest Forecast**
 *Forecast for all four horizons from the last record*
 
-![Latest Forecast](snapshots/3.LatestForecast.png)
+![Latest Forecast](snapshots/4.LatestForecast.png)
 
 </div>
 
