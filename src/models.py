@@ -1,4 +1,3 @@
-"""Step 3: baseline and machine-learning models, plus prediction intervals."""
 import numpy as np
 from sklearn.ensemble import HistGradientBoostingRegressor, RandomForestRegressor
 from sklearn.linear_model import LinearRegression
@@ -21,17 +20,16 @@ ML_MODELS = {
 
 
 def slug(name: str) -> str:
-    """File-name friendly model name."""
+    # File-name friendly model name.
     return name.lower().replace(" ", "_").replace("(", "").replace(")", "")
 
 
 class IntervalCalibrator:
-    """Prediction intervals from validation residuals, binned by predicted level.
-
+    """
+    Prediction intervals from validation residuals, binned by predicted level.
     Demand variance grows with the level of demand, so residual quantiles are
     computed separately within bins of the predicted value.
     """
-
     def __init__(self, alpha: float = INTERVAL_ALPHA, n_bins: int = 10, min_bin: int = 50):
         self.alpha, self.n_bins, self.min_bin = alpha, n_bins, min_bin
 
