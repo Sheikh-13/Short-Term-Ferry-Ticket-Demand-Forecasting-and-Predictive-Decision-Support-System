@@ -1,7 +1,6 @@
-"""Run the full forecasting pipeline: prepare data, train and evaluate every model,
+"""
+Run the full forecasting pipeline: prepare data, train and evaluate every model,
 and save the results used by the Streamlit dashboard.
-
-Usage:  python train.py
 """
 import argparse
 import json
