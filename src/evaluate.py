@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 
-from .config import HORIZONS, LEAD_TIME_RECALL, PEAK_MISS_RATIO
+from .config import LEAD_TIME_RECALL, PEAK_MISS_RATIO
 
 
 def point_metrics(actual, pred) -> dict:
