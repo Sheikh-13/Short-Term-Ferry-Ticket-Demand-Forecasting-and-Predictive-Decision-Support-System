@@ -1,4 +1,3 @@
-"""Step 4-5 and KPIs: metrics, uncertainty and operational indicators."""
 import numpy as np
 import pandas as pd
 
