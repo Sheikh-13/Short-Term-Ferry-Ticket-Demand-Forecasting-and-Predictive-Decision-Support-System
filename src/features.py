@@ -1,5 +1,4 @@
-"""Step 2: feature engineering and forecast targets.
-
+"""
 All features at an origin time t only use intervals up to and including t, so
 nothing from the future leaks into the model inputs.
 """
