@@ -1,7 +1,3 @@
-"""Streamlit dashboard: short-term ferry ticket demand forecasting.
-
-Run with:  streamlit run app.py
-"""
 import json
 from datetime import date
 
@@ -137,18 +133,6 @@ with tab_cmp:
                        xaxis_title="Forecast horizon", hovermode="x unified")
     st.plotly_chart(fig2, width="stretch")
 
-    # st.subheader("Key performance indicators")
-    # kt = kpis[kpis["target"] == target].drop(columns="target").sort_values("Forecast Accuracy %", ascending=False)
-    # st.dataframe(kt.round(1), width="stretch", hide_index=True)
-    # with st.expander("How the KPIs are defined"):
-    #     st.markdown(
-    #         "- **Forecast Accuracy %**: 100 minus the weighted absolute percentage error, averaged over horizons.\n"
-    #         "- **Error Drift (pp)**: change in that percentage error from the 15-minute to the 2-hour horizon. "
-    #         "Negative values mean longer windows are easier to forecast in relative terms.\n"
-    #         "- **Peak Miss Rate %**: share of high-demand windows (top 10% of training windows) where the "
-    #         "forecast was below 75% of the actual value.\n"
-    #         "- **Confidence Band Width (rel %)**: average width of the 90% interval relative to average demand.\n"
-    #         "- **Forecast Lead Time (min)**: longest horizon at which at least 70% of peaks are still caught.")
     st.subheader(f"Key performance indicators ({horizon_label(horizon)} horizon)")
     kh = mt[mt["horizon_min"] == horizon].set_index("model")
     kt = (kpis[kpis["target"] == target].set_index("model")[["Error Drift (pp)", "Forecast Lead Time (min)"]]
