@@ -1,4 +1,3 @@
-"""Step 3: statistical time-series models (ARIMA with Fourier seasonality, Prophet)."""
 import numpy as np
 import pandas as pd
 
@@ -15,7 +14,7 @@ def fourier_terms(index: pd.DatetimeIndex, k_day: int = 4, k_week: int = 2) -> n
 
 
 def prophet_window_forecasts(y: pd.Series, fit_start, fit_end, pred_index: pd.DatetimeIndex) -> pd.Series:
-    """Fit Prophet once and return its per-interval forecast over pred_index."""
+    # Fit Prophet once and return its per-interval forecast over pred_index.
     import logging
     from prophet import Prophet
     logging.getLogger("prophet").setLevel(logging.ERROR)
@@ -31,8 +30,8 @@ def prophet_window_forecasts(y: pd.Series, fit_start, fit_end, pred_index: pd.Da
 
 def arima_window_forecasts(y: pd.Series, fit_start, fit_end, origins: pd.DatetimeIndex,
                            order=(2, 0, 1)) -> pd.DataFrame:
-    """Rolling-origin forecasts from an ARIMA model with Fourier seasonal regressors.
-
+    """
+    Rolling-origin forecasts from an ARIMA model with Fourier seasonal regressors.
     Parameters are estimated once on [fit_start, fit_end]; the model state is then
     advanced through the data with the parameters fixed, and an 8-step forecast is
     issued at every origin. Returns cumulative forecasts (columns 1..8 steps).
